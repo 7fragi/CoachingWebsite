@@ -1,32 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="./resources/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
   <title>Jan "SevenArmy" Fragstein - LoL Coaching</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">About</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <button id="mode-toggle" class="toggle-btn">
+        <i id="moon-icon" class="fas fa-moon"></i>  
+        <i id="sun-icon" class="fas fa-sun"></i>    
+    </button>      
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <main>
-        <header class="hero">
-            <img src="website foto.jpg" alt="Jan 'SevenArmy' Fragstein" class="profile-photo" />
-            <div class="hero-text">
-                <h2>Welcome!</h2>
-                <h1>My name is Jan "SevenArmy" Fragstein and I'm a professional League of Legends coach</h1>
-                <h3>I'm currently working for Eintracht Frankfurt's main team in the 1st division of the German national league and would like to help you get better at League of Legends!</h3>
+  <main>
+    <section class="box hero">
+      <img src="website foto.jpg" alt="Jan 'SevenArmy' Fragstein" class="profile-photo" id="profile-photo"/>
+      <h2>Welcome!</h2>
+      <h1>I am Jan "SevenArmy" Fragstein</h1>
+      <h3>Professional League of Legends coach, currently working for Eintracht Frankfurt in the highest level DACH league.</h3>
+    </section>
+
+    <section id="service" class="box">
+        <h2>Service</h2>  
+        <div class="service-cards">
+          <div class="service-card">
+            <h3>Individual Coaching</h3>
+            <p>1-on-1 coaching sessions tailored to your rank and goals. Includes VOD reviews, live coaching through streams, and personal improvement plans.</p>
+            <a href="contact.html" class="service-btn">Book Solo Session</a>
+          </div>
+        
+          <div class="service-card">
+            <h3>Team Coaching</h3>
+            <p>Structured coaching for teams focusing on macro play, communication, and drafting. Ideal for amateur to semi-pro rosters.</p>
+            <a href="contact.html" class="service-btn">Book Team Session</a>
+          </div>
+        </div>
+    </section>
+
+    <section id="experience" class="box">
+        <section id="experience" class="box">
+            <h2>Career Overview</h2>
+            <div class="timeline">
+              <div class="timeline-entry">
+                <span class="year">2016</span>
+                <p><strong>Player – PENTA</strong><br>Started semi-professional career in League of Legends.</p>
+              </div>
+              <div class="timeline-entry">
+                <span class="year">2017</span>
+                <p><strong>Player – Origen</strong><br>Brief stint with Origen in the Challenger Series.</p>
+              </div>
+              <div class="timeline-entry">
+                <span class="year">2018</span>
+                <p><strong>Player - Mysterious Monkeys/Ad Hoc Gaming</strong></p>
+              </div>
+              <div class="timeline-entry">
+                <span class="year">2019</span>
+                <p><strong>Player – GamerLegion, mousesports, OP Innogy</strong><br></p>
+              </div>
+              <div class="timeline-entry">
+                <span class="year">2021</span>
+                <p><strong>Player – Eintracht Frankfurt</strong></p>
+              </div>
+              <div class="timeline-entry">
+                <span class="year">2022–2023</span>
+                <p><strong>Player – Kaufland Hangry Knights</strong><br>until April 2023.</p>
+              </div>
+              <div class="timeline-entry">
+                <span class="year">2024–Present</span>
+                <p><strong>Coach – Eintracht Frankfurt</strong><br>Transitioned into coaching</p>
+              </div>
             </div>
-        </header>
-    </main>
+          </section>
+          
+    </section>
+  </main>
 
-<script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

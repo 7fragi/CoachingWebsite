@@ -1,110 +1,341 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #443f3f;
-    color: #eee;
-  }
-  
-  nav {
-    background: #222;
-    padding: 1rem;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav a {
-    color: #00adee;
-    text-decoration: none;
-  }
-  
-  section {
-    padding: 2rem;
-    border-bottom: 1px solid #333;
-  }
-  
-  section h2 {
-    color: #00ff99;
-  }
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
 
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-  }
-  
-  main h2 {
-    margin-bottom: 1rem;
-    color: #00adee;
-    font-size: 2rem;
-  }
-  
-  form {
-    max-width: 400px;
-    width: 100%;
-    padding: 2rem;
-    background-color: #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 173, 238, 0.4);
-  }
-  
-  input, textarea, button {
-    width: 100%;
-    padding: 0.75rem;
-    margin-top: 0.5rem;
-    border: 1px solid #444;
-    background-color: #222;
-    color: #eee;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  button {
-    background-color: #00adee;
-    border: none;
-    cursor: pointer;
-    margin-top: 1rem;
-  }
-  
-  button:hover {
-    background-color: #008bb5;
-  }
+body.dark-mode {
+  background-color: #111;
+  color: #f0f0f0;
+}
 
-  .hero {
-    text-align: center;
-    padding: 2rem;
-    background-color: #443f3f;
-    color: #eee;
+body.dark-mode nav {
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .box {
+  background-color: #222; /* Lighter background for boxes */
+  border-color: #444; /* Slightly lighter border for contrast */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Softer shadow for better visibility */
+}
+
+body.dark-mode .service-card {
+  background-color: #333; /* Darker background for service cards */
+  border-color: #444; /* Lighten border color */
+}
+
+body.dark-mode a {
+  color: #f0f0f0; /* Light color for links */
+}
+
+body.dark-mode .contact-link {
+  background-color: #333; /* Darker background for contact links */
+  color: #f0f0f0;
+  border-color: #f0f0f0; /* Lighter border */
+}
+
+body.dark-mode .contact-link:hover {
+  background-color: #f0f0f0;
+  color: #fdf3f3; /* Dark text for better contrast */
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #f5f5f5;
+  padding: 1rem 25rem;
+  border-bottom: 1px solid #ddd;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+}
+
+.hero {
+  text-align: center;
+}
+
+.profile-photo {
+  max-width: 350px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #111;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, textarea, button {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.service-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 700px) {
+  .service-cards {
+    flex-direction: row;
+    justify-content: space-between;
   }
-  
-  .profile-photo {
-    max-width: 400px;
-    width: 100%;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    border: 4px solid #0c2731;
+}
+
+/* Service Cards - Light Mode */
+.service-card {
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #fafafa; /* Light background */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.service-card p {
+  flex-grow: 1;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.service-btn {
+  align-self: flex-start;
+  padding: 0.6rem 1.2rem;
+  background-color: #111;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.service-btn:hover {
+  background-color: #333;
+}
+
+/* Service Cards - Dark Mode */
+body.dark-mode .service-card {
+  background-color: #333; /* Darker background for service cards */
+  border-color: #444; /* Lighter border for contrast */
+}
+
+body.dark-mode .service-card h3 {
+  color: #f0f0f0; /* Light color for headings */
+}
+
+body.dark-mode .service-card p {
+  color: #ddd; /* Lighten text for readability */
+}
+
+body.dark-mode .service-btn {
+  background-color: #f0f0f0; /* Light button in dark mode */
+  color: #111;
+  border-radius: 5px;
+}
+
+body.dark-mode .service-btn:hover {
+  background-color: #ddd;
+  color: #111;
+}
+
+body.dark-mode .service-card .service-btn:hover {
+  background-color: #222; /* Darker on hover */
+  color: #fff; /* Ensure text remains visible */
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-left: 3px solid #ddd;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+.timeline-entry {
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.timeline-entry::before {
+  content: '';
+  position: absolute;
+  left: -1.1rem;
+  top: 0.3rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #111;
+  border-radius: 50%;
+}
+
+.timeline-entry .year {
+  font-weight: 600;
+  color: #111;
+  margin-bottom: -0.5rem;
+  display: block;
+}
+
+body.dark-mode .timeline-entry .year {
+  color: #f0f0f0; /* Light color for year text */
+}
+
+.profile-photo {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  border: 2px solid #111;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  background-color: #fafafa;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-link i {
+  margin-right: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.contact-link:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+.contact-link:active {
+  background-color: #333;
+}
+
+@media (min-width: 700px) {
+  .contact-links {
+    flex-direction: row;
+    justify-content: space-between;
   }
-  
-  .hero-text h2 {
-    font-size: 1.5rem;
-    color: #dde7e3;
-  }
-  
-  .hero-text h1 {
-    font-size: 2rem;
-    margin: 1rem 0;
-  }
-  
-  .hero-text h3 {
-    font-size: 1.2rem;
-    font-weight: normal;
-    color: #ccc;
-  }
-  
+}
+
+/* New Toggle Button Styles */
+.toggle-btn {
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 2px solid #111;
+  background-color: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark Mode Toggle Button */
+body.dark-mode .toggle-btn {
+  border-color: #f0f0f0;
+  color: #f0f0f0;
+}
+
+/* Light Mode Button Styling */
+.toggle-btn {
+  background-color: #f0f0f0;
+  color: #111;
+  border-color: #111;
+}
+
+/* Hover and active state for both modes */
+.toggle-btn:hover {
+  background-color: #ddd;
+  border-color: #222;
+}
+
+body.dark-mode .toggle-btn:hover {
+  background-color: #555;
+  border-color: #f0f0f0;
+}
+
+body.dark-mode #mode-toggle .fa-sun {
+  display: none;
+}
+
+body.dark-mode #mode-toggle .fa-moon {
+  display: block;
+}
+
+/* Focus effect for better accessibility */
+.toggle-btn:focus {
+  outline: 2px solid #f0f0f0;
+  outline-offset: 2px;
+}
