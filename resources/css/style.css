@@ -18,36 +18,36 @@ body.dark-mode nav {
 }
 
 body.dark-mode .box {
-  background-color: #222; /* Lighter background for boxes */
-  border-color: #444; /* Slightly lighter border for contrast */
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Softer shadow for better visibility */
+  background-color: #222;
+  border-color: #444;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
 
 body.dark-mode .service-card {
-  background-color: #333; /* Darker background for service cards */
-  border-color: #444; /* Lighten border color */
+  background-color: #333;
+  border-color: #444;
 }
 
 body.dark-mode a {
-  color: #f0f0f0; /* Light color for links */
+  color: #f0f0f0;
 }
 
 body.dark-mode .contact-link {
-  background-color: #333; /* Darker background for contact links */
+  background-color: #333;
   color: #f0f0f0;
-  border-color: #f0f0f0; /* Lighter border */
+  border-color: #f0f0f0;
 }
 
 body.dark-mode .contact-link:hover {
   background-color: #f0f0f0;
-  color: #fdf3f3; /* Dark text for better contrast */
+  color: #fdf3f3;
 }
 
 nav {
   position: sticky;
   top: 0;
   background-color: #f5f5f5;
-  padding: 1rem 25rem;
+  padding: 1rem;
   border-bottom: 1px solid #ddd;
   z-index: 100;
 }
@@ -82,6 +82,9 @@ main {
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  width: 100%; /* Make sure box is full-width */
+  max-width: 100%; /* Prevent it from exceeding full width */
+  box-sizing: border-box;
 }
 
 .hero {
@@ -89,15 +92,15 @@ main {
 }
 
 .profile-photo {
-  max-width: 100%;  /* Ensure it doesn't overflow the container */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure it doesn't overflow the container */
+  height: auto;
   border-radius: 50%;
   margin-bottom: 1rem;
   border: 3px solid #111;
   display: block;
-  max-width: 350px;  /* Limit the max size */
+  max-width: 350px; /* Limit the max size */
   margin-left: auto;
-  margin-right: auto;  /* Center the image */
+  margin-right: auto;
 }
 
 form {
@@ -137,13 +140,13 @@ button:hover {
   }
 }
 
-/* Service Cards - Light Mode */
+/* Service Cards */
 .service-card {
   flex: 1;
   border: 1px solid #ddd;
   padding: 1.5rem;
   border-radius: 10px;
-  background-color: #fafafa; /* Light background */
+  background-color: #fafafa;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
   display: flex;
   flex-direction: column;
@@ -178,22 +181,22 @@ button:hover {
   background-color: #333;
 }
 
-/* Service Cards - Dark Mode */
+/* Dark Mode - Service Cards */
 body.dark-mode .service-card {
-  background-color: #333; /* Darker background for service cards */
-  border-color: #444; /* Lighter border for contrast */
+  background-color: #333;
+  border-color: #444;
 }
 
 body.dark-mode .service-card h3 {
-  color: #f0f0f0; /* Light color for headings */
+  color: #f0f0f0;
 }
 
 body.dark-mode .service-card p {
-  color: #ddd; /* Lighten text for readability */
+  color: #ddd;
 }
 
 body.dark-mode .service-btn {
-  background-color: #f0f0f0; /* Light button in dark mode */
+  background-color: #f0f0f0;
   color: #111;
   border-radius: 5px;
 }
@@ -204,8 +207,8 @@ body.dark-mode .service-btn:hover {
 }
 
 body.dark-mode .service-card .service-btn:hover {
-  background-color: #222; /* Darker on hover */
-  color: #fff; /* Ensure text remains visible */
+  background-color: #222;
+  color: #fff;
 }
 
 .timeline {
@@ -241,7 +244,7 @@ body.dark-mode .service-card .service-btn:hover {
 }
 
 body.dark-mode .timeline-entry .year {
-  color: #f0f0f0; /* Light color for year text */
+  color: #f0f0f0;
 }
 
 .profile-photo {
@@ -295,7 +298,7 @@ body.dark-mode .timeline-entry .year {
   }
 }
 
-/* New Toggle Button Styles */
+/* Toggle Button Styles */
 .toggle-btn {
   margin-left: auto;
   padding: 0.5rem 1rem;
@@ -307,20 +310,17 @@ body.dark-mode .timeline-entry .year {
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Dark Mode Toggle Button */
 body.dark-mode .toggle-btn {
   border-color: #f0f0f0;
   color: #f0f0f0;
 }
 
-/* Light Mode Button Styling */
 .toggle-btn {
   background-color: #f0f0f0;
   color: #111;
   border-color: #111;
 }
 
-/* Hover and active state for both modes */
 .toggle-btn:hover {
   background-color: #ddd;
   border-color: #222;
@@ -339,14 +339,29 @@ body.dark-mode #mode-toggle .fa-moon {
   display: block;
 }
 
-/* Focus effect for better accessibility */
 .toggle-btn:focus {
   outline: 2px solid #f0f0f0;
   outline-offset: 2px;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 600px) {
   .profile-photo {
-    max-width: 80%; /* Adjust size on mobile */
+    max-width: 80%; /* Make the photo smaller on mobile */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .box {
+    padding: 1rem; /* Adjust padding on mobile */
+    width: 100%;   /* Ensure the box uses the full width of the screen */
+    max-width: 100%; /* Prevent box from overflowing */
+    box-sizing: border-box; /* Include padding and borders in element's total width/height */
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    padding: 1rem; /* Add padding for smaller screens */
   }
 }
