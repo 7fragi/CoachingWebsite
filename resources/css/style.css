@@ -344,3 +344,9 @@ body.dark-mode #mode-toggle .fa-moon {
   outline: 2px solid #f0f0f0;
   outline-offset: 2px;
 }
+
+@media (max-width: 600px) {
+  .profile-photo {
+    max-width: 80%; /* Adjust size on mobile */
+  }
+}
